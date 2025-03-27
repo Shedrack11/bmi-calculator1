@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>BMI Calculator</title>
+</head>
+<body>
+
+ 
+    <style>
+        body {
+            background-image: linear-gradient(to right,rgb(194, 127, 39),rgba(43, 42, 42, 0.875));
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:white;
+            background-color: bru;
+            
+        }
+        .container {
+            padding:25px 34px 25px 7px ;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px  rgb(38, 38, 38);
+            text-align: center;
+        
+        }
+        input {
+            padding: 8px;
+            margin: 6px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background:rgb(38, 38, 38);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            text-align: center;
+        }
+        #popover {
+            background-color:rgb(38, 38, 38);
+            color:white;
+            display: none;
+            position: absolute;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <div class="container">
+        <h2>Body Mass Index Calculator</h2>
+        <input type="number" id="bodymass" placeholder="Enter bodymass (kg)">
+        <input type="number" id="height" placeholder="Enter height (m)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <div id="popover" ></div>
+    </div>
+    
+    <!-- <script>
+        function calculateBMI() {
+            let bodymass = document.getElementById("bodymass").value;
+            let height = document.getElementById("height").value;
+            if (bodymass > 0 && height > 0) {
+                let bmi = (bodymass / (height * height)).toFixed(2);
+                let message = "Your BMI is " + bmi;
+                document.getElementById("popover").innerText = message;
+                document.getElementById("popover").style.display = "block";
+                setTimeout(() => {
+                    document.getElementById("popover").style.display = "none";
+                }, 3000);
+            } else {
+                alert("Please enter a valid bodymass and height!");
+            }
+        }
+    </script> -->
+</body>
+</html>
